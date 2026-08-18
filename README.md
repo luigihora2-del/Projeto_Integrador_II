@@ -20,3 +20,12 @@ Reduzir o absenteísmo e o custo com horas extras no setor operacional, otimizan
 **B2B (Clientes contratantes):** Pequenas, médias e grandes empresas dos setores de varejo, franquias de alimentação rápida (*fast food*), redes de restaurantes, hotéis e hipermercados.
 
 **Usuários Finais:** Gerentes de loja/unidade e colaboradores operacionais (atendentes, garçons, caixas, estoquistas).
+
+## Tecnologias Utilizadas
+* **Front-end / Mobile:** React Native (Expo)
+* **Back-end:** Node.js com Express
+* **Banco de Dados:** PostgreSQL
+* **Autenticação:** JWT (JSON Web Tokens)
+
+## Status do Projeto
+`Etapa 1 concluída` — Em fase de documentação e modelagem inicial.
