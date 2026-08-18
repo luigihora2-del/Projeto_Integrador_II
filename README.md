@@ -1,5 +1,5 @@
 # Projeto_Integrador_II 
-Repositório da Etapa 1 — Documentação Inicial
+Repositório da Etapa 1
 
 ## Nome do Projeto
 **AgroReserva CPCE**
