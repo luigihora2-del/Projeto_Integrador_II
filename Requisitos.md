@@ -1,17 +1,16 @@
 ## Requisitos do Sistema
 
 ### Requisitos Funcionais (RF)
-**RF-01:** O sistema deve permitir o cadastro de empresas, unidades, gerentes e colaboradores.
-**RF-02:** O gerente deve conseguir criar, editar e publicar escalas de trabalho semanais ou mensais.
-**RF-03:** O colaborador deve conseguir visualizar sua escala de trabalho pelo aplicativo mobile.
-**RF-04:** O colaborador deve poder solicitar a troca de turno com outro colega de trabalho diretamente pelo app.
-**RF-05:** O sistema deve validar automaticamente se a troca de turno atende aos critérios legais (intervalo interjornada, limite de horas semanais).
-**RF-06:** O gerente deve receber notificações para aprovar ou recusar as solicitações de trocas pré-validadas.
-**RF-07:** O sistema deve enviar notificações em tempo real aos colaboradores sobre alterações de escala.
+* **RF-01:** O sistema deve permitir o cadastro de usuários divididos por perfis (Administrador/Técnico, Docente e Discente).
+* **RF-02:** O sistema deve permitir o cadastro e mapeamento das áreas experimentais (talhões, estufas e instalações) com suas respectivas dimensões e especificações técnicas.
+* **RF-03:** O usuário deve conseguir visualizar a disponibilidade das áreas em um calendário interativo de reservas.
+* **RF-04:** O aluno deve conseguir solicitar a reserva de um espaço informando orientador, período de uso, objetivo do experimento e cultura/espécie estudada.
+* **RF-05:** O responsável técnico pelo setor deve receber notificações para aprovar, recusar ou solicitar ajustes nas solicitações de reserva.
+* **RF-06:** O sistema deve emitir alertas quando houver tentativa de agendamento duplicado no mesmo espaço e período.
+* **RF-07:** O sistema deve gerar relatórios em PDF do histórico de uso das áreas para fins de prestação de contas acadêmica.
 
 ### Requisitos Não Funcionais (RNF)
-**RNF-01 (Segurança):** Os dados de usuários e relatórios da empresa devem ser armazenados de forma criptografada, em conformidade com a LGPD.
-**RNF-02 (Desempenho):** O tempo de resposta das consultas de escala no aplicativo não deve ultrapassar 2 segundos.
-**RNF-03 (Disponibilidade):** O sistema deve estar disponível 99,5% do tempo (24/7).
-**RNF-04 (Usabilidade):** A interface mobile deve ser intuitiva e adaptada para uso fácil em telas de smartphones (Android e iOS).
-**RNF-05 (Compatibilidade):** A plataforma web para gestão deve ser acessível nos principais navegadores (Chrome, Firefox, Edge e Safari).
+* **RNF-01 (Acessibilidade):** A interface web deve ser responsiva, permitindo acesso via computador e navegadores mobile.
+* **RNF-02 (Segurança):** A autenticação de alunos e professores deve exigir validação de e-mail institucional (`@ufpi.edu.br`).
+* **RNF-03 (Desempenho):** O tempo de carregamento do calendário de ocupação não deve ultrapassar 2 segundos sob conexão padrão.
+* **RNF-04 (Disponibilidade):** O sistema deve estar disponível 99% do tempo para consulta de horários e envio de solicitações.
