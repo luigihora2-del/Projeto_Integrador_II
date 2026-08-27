@@ -1,30 +1,54 @@
-# Projeto_Integrador_II 
-Repositório da Etapa 1
+# 🌱 AgroReserva CPCE — Gestão de Áreas Experimentais
 
-## Nome do Projeto
-**AgroReserva CPCE**
+> **Universidade Federal do Piauí — UFPI**
+> **Campus Professora Cinobelina Elvas (CPCE / Bom Jesus)**
+> **Projeto Integrador II — Prof. Clécio Sousa**
 
-## Descrição
-O **AgroReserva CPCE** é uma plataforma web e mobile voltada para a gestão, agendamento e controle de uso das áreas experimentais, estufas, laboratórios de campo e setores de produção animal/vegetal do Campus Professora Cinobelina Elvas (UFPI - Bom Jesus). A ferramenta centraliza as solicitações de espaço físico para pesquisas de graduação, pós-graduação e projetos de extensão dos cursos de Ciências Agrárias e Biológicas.
+---
 
-## Problema
-Estudantes e pesquisadores do CPCE necessitam constantemente de talhões de terra, espaço em estufas e instalações para conduzir experimentos práticos e TCCs. Atualmente, a reserva dessas áreas ocorre de forma descentralizada e informal (via planilhas avulsas, quadros físicos ou conversas diretas), gerando sobreposição de pesquisas na mesma área, conflitos no uso de recursos como irrigação e insumos, e falta de histórico de ocupação do solo acadêmico.
+## 📌 Descrição do Projeto
 
-## Solução
-Um sistema de mapeamento digital do campus dividido por setores (talhões, blocos de estufa e instalações). O aluno ou pesquisador visualiza a disponibilidade em tempo real, seleciona o espaço desejado e envia uma solicitação detalhada (informando período do experimento, cultura/animal estudado e docente orientador). O responsável técnico pelo setor recebe o pedido e aprova a reserva diretamente pela plataforma.
+O **AgroReserva CPCE** é uma plataforma web e mobile desenvolvida para organizar e otimizar a reserva e o uso dos espaços agrícolas experimentais do campus (talhões de cultivo, estufas, casas de vegetação e laboratórios de campo). O sistema centraliza as solicitações de discentes e pesquisadores, otimiza o fluxo de aprovação pelos técnicos responsáveis e mantém um histórico digital do uso do solo no campus.
 
-## Objetivo
-Digitalizar e otimizar a gestão das áreas agrícolas e de pesquisa do Campus CPCE/UFPI, eliminando conflitos de espaço, garantindo a transparência no uso do patrimônio universitário e oferecendo previsibilidade para professores e alunos realizarem seus experimentos.
+## ❓ O Problema
 
-## Público-alvo
-**Administradores:** Coordenadores de cursos, gerentes de setores agrícolas do CPCE e responsáveis técnicos pelos laboratórios de campo.
-  **Usuários Finais:** Docentes, discentes de graduação e pós-graduação (Agronomia, Zootecnia, Engenharia Florestal, Medicina Veterinária e Licenciatura em Ciências Biológicas) e pesquisadores.
+Atualmente, o agendamento de talhões e estufas no CPCE ocorre de forma informal ou descentralizada. Isso resulta em sobreposição de datas de plantio, conflito no uso de sistemas de irrigação e equipamentos, além da falta de um histórico sobre quais culturas e defensivos foram aplicados anteriormente em cada parcela de terra.
 
-## Tecnologias Utilizadas
-* **Front-end:** React.js / HTML5 e CSS3
-* **Back-end:** Node.js com Express
-* **Banco de Dados:** PostgreSQL
-* **Autenticação:** JWT (JSON Web Tokens)
+## 💡 A Solução
 
-## Status do Projeto
-`Etapa 1 concluída` — Em fase de documentação e modelagem inicial.
+Uma plataforma centralizada com calendário interativo onde o pesquisador visualiza a disponibilidade de cada setor, submete sua proposta informando orientador e cultura agrícola, e aguarda a validação do responsável técnico. O sistema evita agendamentos duplicados e emite alertas automatizados.
+
+## 🎯 Objetivos
+
+### Objetivo Geral
+Desenvolver uma plataforma de gestão e agendamento das áreas experimentais do Campus CPCE, eliminando conflitos de uso e centralizando o histórico de ocupação do solo.
+
+### Objetivos Específicos
+- Permitir o cadastro e mapeamento das áreas experimentais (talhões, estufas, laboratórios).
+- Disponibilizar um calendário interativo de consulta de disponibilidade por setor.
+- Possibilitar a solicitação de reserva informando período, projeto, orientador e cultura.
+- Fornecer um fluxo de aprovação/recusa para o responsável técnico.
+- Emitir alertas automáticos de conflito e gerar relatórios de ocupação exportáveis em PDF.
+
+
+## 👥 Equipe
+
+| Nome | Função |
+|---|---|
+| Luigi | [Função] |
+
+
+## 📁 Estrutura da Documentação
+
+```
+docs/
+├── requisitos.md   → Requisitos Funcionais e Não Funcionais
+└── modelagem.md    → Fluxograma, modelagem de dados e Kanban
+```
+
+## 📅 Status do Projeto
+
+- [x] Etapa 1 — Concepção, Escopo e Estruturação no GitHub
+- [x] Etapa 2 — Planejamento Operacional e Gestão Ágil
+- [ ] Etapa 3 — Execução, Validação e Entrega Final
+
