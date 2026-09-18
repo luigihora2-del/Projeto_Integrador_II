@@ -1,1 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroReserva CPCE - Gestão de Áreas Experimentais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
 
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i>
+            <span>AgroReserva <strong>CPCE</strong></span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#talhoes">Áreas Experimentais</a></li>
+                <li><a href="#agendamento">Agendar Área</a></li>
+                <li><a href="#reservas">Reservas Ativas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Gestão Inteligente das Áreas Experimentais do CPCE</h1>
+            <p>Plataforma oficial para agendamento, controle de uso e otimização dos talhões do Campus Professora Cinobelina Elvas - UFPI / CTBJ.</p>
+            <a href="#agendamento" class="btn-primary"><i class="fa-solid fa-calendar-check"></i> Fazer Agendamento</a>
+        </div>
+    </section>
+
+    <!-- ÁREAS EXPERIMENTAIS / TALHÕES -->
+    <section id="talhoes" class="container">
+        <h2><i class="fa-solid fa-map-location-dot"></i> Talhões e Áreas Disponíveis</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <span class="badge badge-agronomia">Agronomia</span>
+                <h3>Talhão A - Fitotecnia</h3>
+                <p>Área destinada a experimentos com culturas anuais e adubação orgânica.</p>
+                <small><i class="fa-solid fa-ruler-combined"></i> Área: 1.5 Hectares</small>
+            </div>
+            <div class="card">
+                <span class="badge badge-zootecnia">Zootecnia</span>
+                <h3>Talhão B - Pastagem e Forragicultura</h3>
+                <p>Espaço reservado para manejo de pastagens e nutrição animal.</p>
+                <small><i class="fa-solid fa-ruler-combined"></i> Área: 2.0 Hectares</small>
+            </div>
+            <div class="card">
+                <span class="badge badge-irrigacao">Irrigação</span>
+                <h3>Talhão C - Sistema Fertirrigado</h3>
+                <p>Equipado com pivô e gotejamento para pesquisas de manejo hídrico.</p>
+                <small><i class="fa-solid fa-ruler-combined"></i> Área: 1.0 Hectare</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- FORMULÁRIO DE AGENDAMENTO -->
+    <section id="agendamento" class="container bg-light">
+        <h2 id="tituloForm"><i class="fa-solid fa-calendar-plus"></i> Agendar Uso de Área Experimental</h2>
+        <form id="formReserva" class="form-reserva">
+            <input type="hidden" id="reservaId">
+
+            <div class="form-group">
+                <label for="pesquisador"><i class="fa-solid fa-user"></i> Nome do Responsável/Docente:</label>
+                <input type="text" id="pesquisador" placeholder="Ex: Prof. Dr. João Silva / Turma 3º Ano B" required>
+            </div>
+
+            <div class="form-group">
+                <label for="curso"><i class="fa-solid fa-graduation-cap"></i> Curso/Vínculo:</label>
+                <select id="curso" required>
+                    <option value="">Selecione...</option>
+                    <option value="Técnico em Agropecuária (CTBJ)">Técnico em Agropecuária (CTBJ)</option>
+                    <option value="Agronomia">Agronomia</option>
+                    <option value="Zootecnia">Zootecnia</option>
+                    <option value="Engenharia Florestal">Engenharia Florestal</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="talhao"><i class="fa-solid fa-wheat-awn"></i> Talhão Solicitado:</label>
+                <select id="talhao" required>
+                    <option value="">Selecione a área...</option>
+                    <option value="Talhão A - Fitotecnia">Talhão A - Fitotecnia</option>
+                    <option value="Talhão B - Pastagem e Forragicultura">Talhão B - Pastagem e Forragicultura</option>
+                    <option value="Talhão C - Sistema Fertirrigado">Talhão C - Sistema Fertirrigado</option>
+                </select>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dataInicio">Data de Início:</label>
+                    <input type="date" id="dataInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="dataFim">Data de Término:</label>
+                    <input type="date" id="dataFim" required>
+                </div>
+            </div>
+
+            <div class="btn-group">
+                <button type="submit" id="btnSubmit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Confirmar Agendamento</button>
+                <button type="button" id="btnCancelarEdicao" class="btn-cancel-edit style-hidden"><i class="fa-solid fa-xmark"></i> Cancelar Edição</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- LISTA DE RESERVAS -->
+    <section id="reservas" class="container">
+        <h2><i class="fa-solid fa-list-check"></i> Painel de Agendamentos Cadastrados</h2>
+        <div class="table-responsive">
+            <table id="tabelaReservas">
+                <thead>
+                    <tr>
+                        <th>Responsável</th>
+                        <th>Curso/Vínculo</th>
+                        <th>Área / Talhão</th>
+                        <th>Período</th>
+                        <th>Status</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="corpoTabela">
+                    <!-- Gerado dinamicamente via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p><strong>AgroReserva CPCE</strong> - Projeto Integrador II | UFPI - CTBJ</p>
+        <p>Desenvolvido por <strong>Luigi Prudêncio Hora</strong> | Orientação: Prof. Clécio Sousa</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
